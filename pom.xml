@@ -18,7 +18,7 @@
     <description>Backend service for analyzing GitHub repositories</description>
 
     <properties>
-        <java.version>17</java.version>
+        <java.version>21</java.version>
         <maven.compiler.release>${java.version}</maven.compiler.release>
         <lombok.version>1.18.40</lombok.version>
     </properties>
