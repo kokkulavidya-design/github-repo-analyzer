@@ -30,7 +30,7 @@ com.githubrepoanalyzer
 
 ## Tech Stack
 
-- **Java 17**
+- **Java 25**
 - **Spring Boot 3.1.5**
 - **Spring Data JPA**
 - **MySQL Database** (Aiven Cloud)
@@ -40,7 +40,7 @@ com.githubrepoanalyzer
 
 ## Prerequisites
 
-- Java 17 or higher
+- Java 25 or higher
 - Maven 3.8.1 or higher
 - MySQL database running (local or Aiven cloud)
 

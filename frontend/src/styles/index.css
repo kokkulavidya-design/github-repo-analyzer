@@ -1,0 +1,154 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Custom Base Styles */
+@layer base {
+  * {
+    @apply box-border;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply m-0 p-0 bg-dark-950 text-gray-100 font-sans antialiased;
+    background: linear-gradient(135deg, #0a0d0f 0%, #191d21 50%, #002966 100%);
+    background-attachment: fixed;
+    min-height: 100vh;
+  }
+
+  #root {
+    @apply min-h-screen;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl lg:text-5xl;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl lg:text-4xl;
+  }
+}
+
+/* Custom Components */
+@layer components {
+  /* Glass Morphism Card */
+  .glass-card {
+    @apply backdrop-blur-glass bg-white/5 border border-white/10 rounded-xl shadow-glass;
+    transition: all 0.3s ease;
+  }
+
+  .glass-card:hover {
+    @apply bg-white/10 border-primary-500/50 shadow-glow;
+    transform: translateY(-4px);
+  }
+
+  /* Gradient Button */
+  .btn-gradient {
+    @apply px-6 py-3 rounded-lg font-semibold text-white bg-gradient-blue;
+    @apply hover:shadow-glow transition-all duration-300;
+    @apply active:scale-95;
+  }
+
+  .btn-gradient:hover {
+    transform: translateY(-2px);
+  }
+
+  /* Gradient Text */
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary-400 via-primary-500 to-primary-600;
+    @apply bg-clip-text text-transparent;
+  }
+
+  /* Container */
+  .container-custom {
+    @apply w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Section Spacing */
+  .section-padding {
+    @apply py-12 md:py-16 lg:py-20;
+  }
+
+  /* Input Fields */
+  .input-glass {
+    @apply w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg;
+    @apply text-white placeholder-gray-400;
+    @apply focus:outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20;
+    @apply transition-all duration-300;
+  }
+
+  /* Floating Animation */
+  .floating {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  /* Responsive Grid */
+  .grid-responsive {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6;
+  }
+}
+
+/* Custom Utilities */
+@layer utilities {
+  /* Scrollbar Styling */
+  .scrollbar-custom::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  .scrollbar-custom::-webkit-scrollbar-track {
+    @apply bg-dark-900 rounded;
+  }
+
+  .scrollbar-custom::-webkit-scrollbar-thumb {
+    @apply bg-primary-600 rounded hover:bg-primary-500;
+  }
+
+  /* Text Shadow */
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  /* Backdrop Blur */
+  .backdrop-blur-custom {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+}
+
+/* Responsive Breakpoints */
+/* 
+  Mobile: < 640px (sm)
+  Tablet: 640px - 1024px (sm to lg)
+  Desktop: > 1024px (lg+)
+*/
+
+/* Mobile First Approach - Base styles are for mobile */
+/* Use md: lg: xl: 2xl: for larger screens */
+
+/* Custom Animations */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.shimmer {
+  animation: shimmer 2s infinite;
+  background: linear-gradient(to right, transparent 0%, rgba(255, 255, 255, 0.1) 50%, transparent 100%);
+  background-size: 1000px 100%;
+}

@@ -2,7 +2,7 @@
 
 ## Prerequisites
 
-- Java 17 or higher installed
+- Java 25 or higher installed
 - Apache Maven 3.8.1 or higher
 - MySQL Server running (local or Aiven cloud)
 - Git (optional, for version control)
@@ -174,7 +174,7 @@ server.port=8081
 **Error:** `Java version`
 
 **Solution:**
-- Ensure Java 17+ is installed
+- Ensure Java 25+ is installed
 - Set JAVA_HOME environment variable
 - Verify: `java --version`
 
